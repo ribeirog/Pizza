@@ -1,0 +1,87 @@
+.fp-tableCell {
+    vertical-align: bottom;
+    background: url(../img/logo-1.png) no-repeat center;
+}
+
+.home{
+    background-image: url(../img/background-1.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+.order{
+    font-family: 'Pacifico', cursive;
+    background: url(../img/background-2.png) no-repeat 50% 50% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    padding-top: 20px;
+}
+
+.home-content>h1,h3 {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: white;
+}
+
+.home-content>h1 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 0.8;
+}
+
+.home-content>h3 {
+    font-size: 60px;
+}
+
+.order-background{
+    font-family: 'Pacifico', cursive;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px;
+}
+
+img.order-title{
+    margin-top: -30px;
+}
+
+.order-title{
+    font-size: 50px;
+    color: #be202e;
+    line-height: 2;
+}
+
+.order-steps{
+
+}
+
+.order-bullet{
+    background-color: #be202e;
+    color: #ffffff;
+    font-size: 30px;
+    min-width: 40px;
+    height: 40px;
+    line-height: 0;
+    padding-top: 20px;
+}
+
+.order-subtitle{
+    font-size: 40px;
+    color: #be202e;
+}
+
+.home-button{
+    position: relative;
+    float: right;
+}
+
+img.pizza{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+div.pizza{
+   text-align: center;
+    font-size: 25px;
+    color: #be202e;
+}
