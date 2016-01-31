@@ -19,7 +19,7 @@
     padding-top: 20px;
 }
 
-.home-content>h1,h3 {
+.home-content>h1,.home-content>h3 {
     font-family: 'PT Sans Narrow', sans-serif;
     color: white;
 }
@@ -50,7 +50,9 @@ img.order-title{
     line-height: 2;
 }
 
-.order-steps{
+.order-review{
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #be202e;
 
 }
 
@@ -80,8 +82,22 @@ img.pizza{
     margin-right: auto
 }
 
-div.pizza{
+div.pizza p{
    text-align: center;
     font-size: 25px;
     color: #be202e;
 }
+
+label.size, label.sauce{
+    cursor: pointer;
+}
+
+.size input, .sauce input, .cheese input, .toppings input, .veggies input{
+    display: none;
+}
+
+div p.no-cheese{
+     text-align: left;
+     margin-top: 66px;
+ }
+

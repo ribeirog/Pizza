@@ -38,193 +38,263 @@
     </div>
 
     <div class="order" id="order">
-        <div class="small-8 small-centered columns order-background">
-            <div>
-                <img src="resources/img/logo-2.png" class="order-title">
-                <spam class="order-title">Create your own pizza!</spam>
-                <br><br>
-                <div class="row">
-                    <div class="order-steps">
-                        <span class="badge order-bullet" id="messageCount">1</span>
-                        <span class="order-subtitle">Pick a size:</span>
-                    </div>
-                    <br>
-                    <div class="small-12 large-4 columns">
-                        <div class="pizza">
-                            <img src="resources/img/pizza-1.png" class="pizza">
-                            <p>Large</p>
+        <form method="post" action="order.php">
+            <div class="small-8 small-centered columns order-background">
+                <div>
+                    <img src="resources/img/logo-2.png" class="order-title">
+                    <spam class="order-title">Create your own pizza!</spam>
+                    <br><br>
+                    <div class="row">
+                        <div class="order-steps">
+                            <span class="badge order-bullet">1</span>
+                            <span class="order-subtitle">Pick a size:</span>
                         </div>
-                    </div>
-                    <div class="small-12 large-4 columns">
-                        <div class="pizza">
-                            <img src="resources/img/pizza-2.png" class="pizza" style="padding-top: 20px">
-                            <p>Medium</p>
-                        </div>
-                    </div>
-                    <div class="small-12 large-4 columns">
-                        <div class="pizza">
-                            <img src="resources/img/pizza-3.png" class="pizza" style="padding-top: 30px">
-                            <p>Small</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12">
                         <br>
-                        <center>
-                            <img src="resources/img/dash.png">
-                        </center>
+                        <div class="small-12 large-4 columns">
+                            <label class="size">
+                                <div class="pizza">
+                                    <img src="resources/img/pizza-1.png" class="pizza">
+                                    <p>Large</p>
+                                </div>
+                                <input type="radio" value="Large" class="size1" name="size">
+                            </label>
+                        </div>
+                        <div class="small-12 large-4 columns">
+                            <label class="size">
+                                <div class="pizza">
+                                    <img src="resources/img/pizza-2.png" class="pizza" style="padding-top: 20px">
+                                    <p>Medium</p>
+                                </div>
+                                <input type="radio" value="Medium" class="size1" name="size">
+                            </label>
+                        </div>
+                        <div class="small-12 large-4 columns">
+                            <label class="size">
+                                <div class="pizza">
+                                    <img src="resources/img/pizza-3.png" class="pizza" style="padding-top: 30px">
+                                    <p>Small</p>
+                                </div>
+                                <input type="radio" value="Small" class="size1" name="size">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12">
+                            <br>
+                            <center>
+                                <img src="resources/img/dash.png">
+                            </center>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="order-steps">
+                            <span class="badge order-bullet">2</span>
+                            <span class="order-subtitle">Choose your sauce:</span>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="sauce">
+                                <div class="pizza">
+                                    <img src="resources/img/sauce-1.png" class="pizza">
+                                    <p>Marinara</p>
+                                </div>
+                                <input type="radio" value="Marinara" name="sauce">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="sauce">
+                                <div class="pizza">
+                                    <img src="resources/img/sauce-2.png" class="pizza">
+                                    <p>Barbecue</p>
+                                </div>
+                                <input type="radio" value="Barbecue" name="sauce">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="sauce">
+                                <div class="pizza">
+                                    <img src="resources/img/sauce-3.png" class="pizza">
+                                    <p>Parmesan</p>
+                                </div>
+                                <input type="radio" value="Parmesan" name="sauce">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="sauce">
+                                <div class="pizza">
+                                    <img src="resources/img/sauce-4.png" class="pizza">
+                                    <p>Buffalo</p>
+                                </div>
+                                <input type="radio" value="Buffalo" name="sauce">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="small-12">
+                            <br>
+                            <center>
+                                <img src="resources/img/dash.png">
+                            </center>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="order-steps">
+                            <span class="badge order-bullet">3</span>
+                            <span class="order-subtitle">Do you want cheese?</span>
+                        </div>
                         <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="order-steps">
-                        <span class="badge order-bullet" id="messageCount">2</span>
-                        <span class="order-subtitle">Choose your sauce:</span>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/sauce-1.png" class="pizza">
-                            <p>Marinara</p>
+                        <div class="small-12 large-3 columns">
+                            <label class="cheese">
+                                <div class="pizza">
+                                    <img src="resources/img/cheese.png" class="pizza">
+                                    <p>Yes, please</p>
+                                </div>
+                                <input type="radio" value="yes" name="cheese">
+                            </label>
+                        </div>
+                        <div class="small-12 large-9 columns">
+                            <label class="cheese">
+                                <div class="pizza" style="text-align: left">
+                                    <p class="no-cheese">No, thanks</p>
+                                </div>
+                                <input type="radio" value="no" name="cheese">
+                            </label>
                         </div>
                     </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/sauce-2.png" class="pizza">
-                            <p>Barbecue</p>
+                    <div class="row">
+                        <div class="small-12">
+                            <br>
+                            <center>
+                                <img src="resources/img/dash.png">
+                            </center>
+                            <br>
                         </div>
                     </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/sauce-3.png" class="pizza">
-                            <p>Parmesan</p>
+                    <div class="row">
+                        <div class="order-steps">
+                            <span class="badge order-bullet">4</span>
+                            <span class="order-subtitle">Toppings:</span>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="toppings">
+                                <div class="pizza" id="img_n1">
+                                    <img src="resources/img/topping-1.png" class="pizza" style="padding-top: 20px">
+                                    <p>Peperoni</p>
+                                </div>
+                                <input type="checkbox" value="Peperoni" name="toppings" id="n1" class="topping">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="toppings">
+                                <div class="pizza" id="img_n2">
+                                    <img src="resources/img/topping-2.png" class="pizza">
+                                    <p>Bacon</p>
+                                </div>
+                                <input type="checkbox" value="Bacon" name="toppings" id="n2" class="topping">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="toppings">
+                                <div class="pizza"  id="img_n3">
+                                    <img src="resources/img/topping-3.png" class="pizza" style="padding-top: 20px">
+                                    <p>Ham</p>
+                                </div>
+                                <input type="checkbox" value="Ham" name="toppings" id="n3" class="topping">
+                            </label>
+                        </div>
+                        <div class="small-12 large-3 columns">
+                            <label class="toppings">
+                                <div class="pizza"  id="img_n4">
+                                    <img src="resources/img/topping-4.png" class="pizza" style="padding-top: 5px">
+                                    <p>Canandian Ham</p>
+                                </div>
+                                <input type="checkbox" value="Canadian Ham" name="toppings" id="n4" class="topping">
+                            </label>
                         </div>
                     </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/sauce-4.png" class="pizza">
-                            <p>Buffalo</p>
+                    <div class="row">
+                        <div class="small-12">
+                            <br>
+                            <center>
+                                <img src="resources/img/dash.png">
+                            </center>
+                            <br>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="small-12">
+                    <div class="row">
+                        <div class="order-steps">
+                            <span class="badge order-bullet">5</span>
+                            <span class="order-subtitle">Vaggies</span>
+                        </div>
                         <br>
-                        <center>
-                            <img src="resources/img/dash.png">
-                        </center>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="order-steps">
-                        <span class="badge order-bullet" id="messageCount">3</span>
-                        <span class="order-subtitle">Do you want cheese?</span>
-                    </div>
-                    <br>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/cheese.png" class="pizza">
-                            <p>Yes, please</p>
+                        <div class="small-12 large-3 columns">
+                            <label class="veggies">
+                                <div class="pizza" id="img_v1">
+                                    <img src="resources/img/veggie-1.png" class="pizza">
+                                    <p>Bell pepper</p>
+                                </div>
+                                <input type="checkbox" value="Bell Pepper" name="toppings" id="v1" class="veggie">
+                            </label>
+                        </div>
+                        <div class="small-12 large-9 columns">
+                            <label class="veggies">
+                                <div class="pizza" style="text-align: left" id="img_v2">
+                                    <img src="resources/img/veggie-2.png" style="padding-top: 13px">
+                                    <p style="text-align: left">Olives</p>
+                                </div>
+                                <input type="checkbox" value="Black Olives" name="toppings" id="v2" class="veggie">
+                            </label>
                         </div>
                     </div>
-                    <div class="small-12 large-9 columns">
-                        <div class="pizza" style="text-align: left">
-                            <img src="resources/img/cheese.png" class="pizza" style="opacity: 0">
-                            <p>No, thanks</p>
+                    <div class="row">
+                        <div class="small-12">
+                            <br>
+                            <center>
+                                <img src="resources/img/dash.png">
+                            </center>
+                            <br>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="small-12">
-                        <br>
-                        <center>
-                            <img src="resources/img/dash.png">
-                        </center>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="order-steps">
-                        <span class="badge order-bullet" id="messageCount">4</span>
-                        <span class="order-subtitle">Toppings:</span>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/topping-1.png" class="pizza" style="padding-top: 20px">
-                            <p>Peperoni</p>
+                    <div class="row">
+                        <div class="small-12 large-9 columns">
+                            <div class="pizza">
+                                <div class="order-steps">
+                                    <span class="badge order-bullet">6</span>
+                                    <span class="order-subtitle">Review your order</span>
+                                </div>
+
+                                <br>
+
+                                <table class="order-review">
+                                    <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Price</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody class="itemsToAdd">
+                                    <tr class="crust">
+
+                                    </tr>
+                                    <tr>
+                                        <td><b>Total</b></td>
+                                        <td>$15.00</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/topping-2.png" class="pizza">
-                            <p>Bacon</p>
-                        </div>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/topping-3.png" class="pizza" style="padding-top: 20px">
-                            <p>Ham</p>
-                        </div>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/topping-4.png" class="pizza" style="padding-top: 5px">
-                            <p>Canandian Ham</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12">
-                        <br>
-                        <center>
-                            <img src="resources/img/dash.png">
-                        </center>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="order-steps">
-                        <span class="badge order-bullet" id="messageCount">5</span>
-                        <span class="order-subtitle">Vaggies</span>
-                    </div>
-                    <br>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <img src="resources/img/veggie-1.png" class="pizza">
-                            <p>Bell pepper</p>
-                        </div>
-                    </div>
-                    <div class="small-12 large-9 columns">
-                        <div class="pizza" style="text-align: left">
-                            <img src="resources/img/veggie-2.png" style="padding-top: 13px">
-                            <p>Olives</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12">
-                        <br>
-                        <center>
-                            <img src="resources/img/dash.png">
-                        </center>
-                        <br>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="small-12 large-9 columns">
-                        <div class="pizza">
-                            ready?
-                        </div>
-                    </div>
-                    <div class="small-12 large-3 columns">
-                        <div class="pizza">
-                            <a href="javascript:void(0)"><img src="resources/img/go-2.png" ></a>
+                        <div class="small-12 large-3 columns">
+                            <div class="pizza">
+                                <a href="javascript:void(0)"><img src="resources/img/go-2.png" ></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
@@ -252,7 +322,65 @@
             }, 2000);
 
         });
+
+        $(".size").click(function() {
+            $(".size").fadeTo("400", 0.4);
+            $(this).fadeTo( "fast", 1.0 );
+
+            var size = $('.size1').val();
+            var price;
+
+            if (size == "Large")
+                price = "$ 5.00";
+            if (size == "Medium")
+                price = "$ 4.00";
+            if (size == "Small")
+                price = "$ 3.00";
+
+            var row = "<td>"+size+"</td><td>" + price + "</td>";
+
+            $('.crust').html(row);
+
+        });
+        $(".sauce").click(function() {
+            $(".sauce").fadeTo("400", 0.4);
+            $(this).fadeTo( "fast", 1.0 );
+        });
+        $(".cheese").click(function() {
+            $(".cheese").fadeTo("400", 0.4);
+            $(this).fadeTo( "fast", 1.0 );
+        });
+        $(".toppings").click(function() {
+            if($("#n1").is(':checked'))
+                $("#img_n1").fadeTo('fast', 1);
+            else
+                $("#img_n1").fadeTo(400, 0.4);
+            if($("#n2").is(':checked'))
+                $("#img_n2").fadeTo('fast', 1);
+            else
+                $("#img_n2").fadeTo(400, 0.4);
+            if($("#n3").is(':checked'))
+                $("#img_n3").fadeTo('fast', 1);
+            else
+                $("#img_n3").fadeTo(400, 0.4);
+            if($("#n4").is(':checked'))
+                $("#img_n4").fadeTo('fast', 1);
+            else
+                $("#img_n4").fadeTo(400, 0.4);
+        });
+        $(".veggies").click(function() {
+            if ($("#v1").is(':checked'))
+                $("#img_v1").fadeTo('fast', 1);
+            else
+                $("#img_v1").fadeTo(400, 0.4);
+            if ($("#v2").is(':checked'))
+                $("#img_v2").fadeTo('fast', 1);
+            else
+                $("#img_v2").fadeTo(400, 0.4);
+        });
+
     });
+
 
 
 </script>
