@@ -115,3 +115,43 @@ table tbody tr:nth-child(even) {
     margin-top: -160px;
     margin-right: 45px;
 }
+
+.payment{
+    background-color: #eeeeee;
+}
+
+.payment-header{
+    font-family: 'Pacifico', cursive;
+    color: #be202e;
+    margin-top: 50px;
+}
+
+.payment-item{
+    font-family: 'Pacifico', cursive;
+    color: #be202e;
+}
+
+.delete{
+    text-align: right;
+}
+
+.payment-warning{
+    font-size: 12px;
+    color: gray;
+}
+
+.payment-area-head{
+    margin-top: 35px;
+}
+
+.error{
+    color: red;
+}
+input.error{
+    border: 1px solid red;
+}
+
+div.error{
+    margin-top: -16px;
+    font-size: 11px;
+}

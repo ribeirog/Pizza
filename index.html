@@ -38,7 +38,7 @@
     </div>
 
     <div class="order" id="order">
-        <form method="post" action="order.php" class="order-form">
+        <form method="POST" action="order.php" class="order-form">
             <div class="small-8 small-centered columns order-background">
                 <div>
                     <img src="resources/img/logo-2.png" class="order-title">
@@ -56,7 +56,7 @@
                                     <img src="resources/img/pizza-1.png" class="pizza">
                                     <p>Large</p>
                                 </div>
-                                <input type="radio" value="1" class="size1" name="size">
+                                <input type="radio" value="1" class="size1">
                             </label>
                         </div>
                         <div class="small-12 large-4 columns">
@@ -65,7 +65,7 @@
                                     <img src="resources/img/pizza-2.png" class="pizza" style="padding-top: 20px">
                                     <p>Medium</p>
                                 </div>
-                                <input type="radio" value="2" class="size1" name="size">
+                                <input type="radio" value="2" class="size1">
                             </label>
                         </div>
                         <div class="small-12 large-4 columns">
@@ -74,7 +74,7 @@
                                     <img src="resources/img/pizza-3.png" class="pizza" style="padding-top: 30px">
                                     <p>Small</p>
                                 </div>
-                                <input type="radio" value="3" class="size1" name="size">
+                                <input type="radio" value="3" class="size1">
                             </label>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                                     <img src="resources/img/sauce-1.png" class="pizza">
                                     <p>Marinara</p>
                                 </div>
-                                <input type="radio" value="1" class="sauce1" name="sauce">
+                                <input type="radio" value="1" class="sauce1">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
@@ -107,7 +107,7 @@
                                     <img src="resources/img/sauce-2.png" class="pizza">
                                     <p>Barbecue</p>
                                 </div>
-                                <input type="radio" value="2" class="sauce1" name="sauce">
+                                <input type="radio" value="2" class="sauce1">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
@@ -116,16 +116,16 @@
                                     <img src="resources/img/sauce-3.png" class="pizza">
                                     <p>Parmesan</p>
                                 </div>
-                                <input type="radio" value="3" class="sauce1" name="sauce">
+                                <input type="radio" value="3" class="sauce1">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
                             <label class="sauce">
                                 <div class="pizza">
-                                    <img src="resources/img/sauce-4.png" class="sauce1" class="pizza">
+                                    <img src="resources/img/sauce-4.png" class="sauce1 pizza">
                                     <p>Buffalo</p>
                                 </div>
-                                <input type="radio" value="4" class="sauce1" name="sauce">
+                                <input type="radio" value="4" class="sauce1">
                             </label>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                                     <img src="resources/img/cheese.png" class="pizza">
                                     <p>Yes, please</p>
                                 </div>
-                                <input type="radio" value="1" class="cheese1" name="cheese">
+                                <input type="radio" value="1" class="cheese1">
                             </label>
                         </div>
                         <div class="small-12 large-9 columns">
@@ -158,7 +158,7 @@
                                 <div class="pizza" style="text-align: left">
                                     <p class="no-cheese">No, thanks</p>
                                 </div>
-                                <input type="radio" value="2" class="cheese1" name="cheese">
+                                <input type="radio" value="2" class="cheese1">
                             </label>
                         </div>
                     </div>
@@ -182,7 +182,7 @@
                                     <img src="resources/img/topping-1.png" class="pizza" style="padding-top: 20px">
                                     <p>Peperoni</p>
                                 </div>
-                                <input type="checkbox" value="1" name="toppings" id="n1" class="topping">
+                                <input type="checkbox" value="1" id="n1" class="topping">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
@@ -191,7 +191,7 @@
                                     <img src="resources/img/topping-2.png" class="pizza">
                                     <p>Bacon</p>
                                 </div>
-                                <input type="checkbox" value="2" name="toppings" id="n2" class="topping">
+                                <input type="checkbox" value="2" id="n2" class="topping">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
@@ -200,7 +200,7 @@
                                     <img src="resources/img/topping-3.png" class="pizza" style="padding-top: 20px">
                                     <p>Ham</p>
                                 </div>
-                                <input type="checkbox" value="3" name="toppings" id="n3" class="topping">
+                                <input type="checkbox" value="3" id="n3" class="topping">
                             </label>
                         </div>
                         <div class="small-12 large-3 columns">
@@ -209,7 +209,7 @@
                                     <img src="resources/img/topping-4.png" class="pizza" style="padding-top: 5px">
                                     <p>Canandian Ham</p>
                                 </div>
-                                <input type="checkbox" value="4" name="toppings" id="n4" class="topping">
+                                <input type="checkbox" value="4" id="n4" class="topping">
                             </label>
                         </div>
                     </div>
@@ -234,7 +234,7 @@
                                     <img src="resources/img/veggie-1.png" class="pizza">
                                     <p>Bell pepper</p>
                                 </div>
-                                <input type="checkbox" value="1" name="toppings" id="v1" class="veggie">
+                                <input type="checkbox" value="1" id="v1" class="veggie">
                             </label>
                         </div>
                         <div class="small-12 large-9 columns">
@@ -243,7 +243,7 @@
                                     <img src="resources/img/veggie-2.png" style="padding-top: 13px">
                                     <p style="text-align: left">Olives</p>
                                 </div>
-                                <input type="checkbox" value="2" name="toppings" id="v2" class="veggie">
+                                <input type="checkbox" value="2" id="v2" class="veggie">
                             </label>
                         </div>
                     </div>
@@ -317,6 +317,7 @@
             <input type="hidden" name="toppings" class="form-toppings" value="">
             <input type="hidden" name="veggies" class="form-veggies" value="">
             <input type="hidden" name="total" class="form-total" value="">
+            <input type="hidden" name="totalInt" class="form-total-1" value="">
 
         </form>
     </div>
@@ -471,6 +472,7 @@
                  pre_total += num;
 
                 $('.order-total').html(toUSD(pre_total));
+                $('.form-total-1').val(pre_total);
                 $('.form-total').val(toUSD(pre_total));
             });
 
@@ -521,7 +523,7 @@
                 $('.form-veggies').val(pizza_veggies);
 
 
-                //$('.order-form').submit();
+                $('.order-form').submit();
             }
         });
 
