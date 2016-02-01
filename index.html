@@ -38,7 +38,7 @@
     </div>
 
     <div class="order" id="order">
-        <form method="post" action="order.php">
+        <form method="post" action="order.php" class="order-form">
             <div class="small-8 small-centered columns order-background">
                 <div>
                     <img src="resources/img/logo-2.png" class="order-title">
@@ -225,7 +225,7 @@
                     <div class="row">
                         <div class="order-steps">
                             <span class="badge order-bullet">5</span>
-                            <span class="order-subtitle">Vaggies</span>
+                            <span class="order-subtitle">Veggies</span>
                         </div>
                         <br>
                         <div class="small-12 large-3 columns">
@@ -275,19 +275,25 @@
                                     </tr>
                                     </thead>
                                     <tbody class="itemsToAdd">
-                                    <tr class="crust">
-                                    </tr>
-                                    <tr class="sauce2">
-                                    </tr>
-                                    <tr class="cheese2">
-                                    </tr>
+                                    <tbody>
+                                        <tr class="crust">
+                                        </tr>
+                                    <tbody>
+                                    <tbody>
+                                        <tr class="sauce2">
+                                        </tr>
+                                    </tbody>
+                                    <tbody>
+                                        <tr class="cheese2">
+                                        </tr>
+                                    </tbody>
                                     <tbody class="topping2">
                                     </tbody>
                                     <tbody class="veggie2">
                                     </tbody>
                                     <tr>
                                         <td></td>
-                                        <td><b>Total: </b></td>
+                                        <td><b>Total: </b>(Before taxes)</td>
                                         <td class="order-total"></td>
                                     </tr>
                                     </tbody>
@@ -295,14 +301,23 @@
 
                             </div>
                         </div>
-                        <div class="small-12 large-3 columns">
+                        <div class="small-12 large12 columns">
                             <div class="pizza">
-                                <a href="javascript:void(0)"><img src="resources/img/go-2.png" ></a>
+                                <a href="javascript:void(0)" class="sendData"><img src="resources/img/go-2.png" ></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Here are some hidden fields to transport the data from this page to order.php -->
+            <input type="hidden" name="crust" class="form-crust" value="">
+            <input type="hidden" name="sauce" class="form-sauce" value="">
+            <input type="hidden" name="cheese" class="form-cheese" value="">
+            <input type="hidden" name="toppings" class="form-toppings" value="">
+            <input type="hidden" name="veggies" class="form-veggies" value="">
+            <input type="hidden" name="total" class="form-total" value="">
+
         </form>
     </div>
 </div>
@@ -340,11 +355,11 @@
             var row;
 
             if (size == 1)
-                row = "<td><b>Size: </b></td><td>Large</td><td class='pricere'>$ 5.00</td>";
+                row = "<td><b>Size: </b></td><td>Large</td><td class='price' data-price='5'>$5.00</td>";
             if (size == 2)
-                row = "<td><b>Size: </b></td><td>Medium</td><td class='price'>$ 4.00</td>";
+                row = "<td><b>Size: </b></td><td>Medium</td><td class='price' data-price='4'>$4.00</td>";
             if (size == 3)
-                row = "<td><b>Size: </b></td><td>Small</td><td class='price'>$ 3.00</td>";
+                row = "<td><b>Size: </b></td><td>Small</td><td class='price' data-price='3'>$3.00</td>";
             $('.crust').html(row);
 
         });
@@ -356,13 +371,13 @@
             var row;
 
             if (souce == 1)
-                row = "<td><b>Sauce: </b></td><td>Marinara</td><td class='price'>$ 1.00</td>";
+                row = "<td><b>Sauce: </b></td><td>Marinara</td><td class='price' data-price='1'>$1.00</td>";
             if (souce == 2)
-                row = "<td><b>Sauce: </b></td><td>Barbecue</td><td class='price'>$ 1.00</td>";
+                row = "<td><b>Sauce: </b></td><td>Barbecue</td><td class='price' data-price='1'>$1.00</td>";
             if (souce == 3)
-                row = "<td><b>Sauce: </b></td><td>Parmesan</td><td class='price'>$ 1.00</td>";
+                row = "<td><b>Sauce: </b></td><td>Parmesan</td><td class='price' data-price='1'>$1.00</td>";
             if (souce == 4)
-                row = "<td><b>Sauce: </b></td><td>Buffalo</td><td class='price'>$ 1.00</td>";
+                row = "<td><b>Sauce: </b></td><td>Buffalo</td><td class='price' data-price='1'>$1.00</td>";
             $('.sauce2').html(row);
 
         });
@@ -374,9 +389,9 @@
             var row;
 
             if (cheese == 1)
-                row = "<td><b>Cheese: </b></td><td>Yes</td><td class='price'>$ 1.00</td>";
+                row = "<td><b>Cheese: </b></td><td>Yes</td><td class='price' data-price='1'>$1.00</td>";
             if (cheese == 2)
-                row = "<td><b>Cheese: </b><td>No</td><td class='price'>$ 0.00</td>";
+                row = "<td><b>Cheese: </b><td>No</td><td class='price' data-price='1'>$0.00</td>";
             $('.cheese2').html(row);
 
         });
@@ -386,7 +401,7 @@
             if($("#n1").is(':checked')){
                 $("#img_n1").fadeTo('fast', 1);
                 if ($('.topping2').find(".t1").length < 1)
-                    row = "<tr class='t1'><td><b>Topping: </b></td><td>Pepperoni</td><td class='price'>$ 1.00</td></tr>";
+                    row = "<tr class='t1'><td><b >Topping: </b></td><td class='top'>Pepperoni</td><td class='price' data-price='1'>$1.00</td></tr>";
             }
             else{
                 $("#img_n1").fadeTo(400, 0.4);
@@ -395,7 +410,7 @@
             if($("#n2").is(':checked')){
                 $("#img_n2").fadeTo('fast', 1);
                 if ($('.topping2').find(".t2").length < 1)
-                    row = "<tr class='t2'><td><b>Topping: </b></td><td>Bacon</td><td class='price'>$ 1.00</td></tr>";
+                    row = "<tr class='t2'><td><b>Topping: </b></td><td class='top'>Bacon</td><td class='price' data-price='1'>$1.00</td></tr>";
             }
             else{
                 $("#img_n2").fadeTo(400, 0.4);
@@ -404,7 +419,7 @@
             if($("#n3").is(':checked')){
                 $("#img_n3").fadeTo('fast', 1);
                 if ($('.topping2').find(".t3").length < 1)
-                    row = "<tr class='t3'><td><b>Topping: </b></td><td>Ham</td><td class='price'>$ 1.00</td></tr>";
+                    row = "<tr class='t3'><td><b>Topping: </b></td><td class='top'>Ham</td><td class='price' data-price='1'>$1.00</td></tr>";
             }
             else{
                 $("#img_n3").fadeTo(400, 0.4);
@@ -413,7 +428,7 @@
             if($("#n4").is(':checked')){
                 $("#img_n4").fadeTo('fast', 1);
                 if ($('.topping2').find(".t4").length < 1)
-                    row = "<tr class='t4'><td><b>Topping: </b></td><td>Canadina Bacon</td><td class='price'>$ 1.00</td></tr>";
+                    row = "<tr class='t4'><td><b>Topping: </b></td><td class='top'>Canadian Bacon</td><td class='price' data-price='1'>$1.00</td></tr>";
             }
             else{
                 $("#img_n4").fadeTo(400, 0.4);
@@ -429,7 +444,7 @@
             if ($("#v1").is(':checked')){
                 $("#img_v1").fadeTo('fast', 1);
                 if ($('.veggie2').find(".v1").length < 1)
-                    row = "<tr class='v1'><td><b>Topping: </b></td><td>Bell Pepper</td><td class='price'>$ 0.50</td></tr>";
+                    row = "<tr class='v1'><td><b>Topping: </b></td><td class='veg'>Bell Pepper</td><td class='price' data-price='0.5'>$0.50</td></tr>";
             }
             else{
                 $("#img_v1").fadeTo(400, 0.4);
@@ -438,7 +453,7 @@
             if ($("#v2").is(':checked')){
                 $("#img_v2").fadeTo('fast', 1);
                 if ($('.veggie2').find(".v2").length < 1)
-                    row = "<tr class='v2'><td><b>Topping: </b></td><td>Black Olives</td><td class='price'>$ 0.50</td></tr>";
+                    row = "<tr class='v2'><td><b>Topping: </b></td><td class='veg'>Black Olives</td><td class='price' data-price='0.5'>$0.50</td></tr>";
             }
             else{
                 $("#img_v2").fadeTo(400, 0.4);
@@ -447,11 +462,70 @@
             $('.veggie2').append(row);
         });
 
+        var pre_total = 0;
 
+        $("body").on("click", function() {
+            var pre_total =0;
+            $('.price').each(function(){
+                var num = $(this).data("price");
+                 pre_total += num;
+
+                $('.order-total').html(toUSD(pre_total));
+                $('.form-total').val(toUSD(pre_total));
+            });
+
+        });
+
+        function toUSD(number) {
+            var number = number.toString(),
+                    dollars = number.split('.')[0],
+                    cents = (number.split('.')[1] || '') +'00';
+            dollars = dollars.split('').reverse().join('')
+                    .replace(/(\d{3}(?!$))/g, '$1,')
+                    .split('').reverse().join('');
+            return '$' + dollars + '.' + cents.slice(0, 2);
+        }
+
+        $('.sendData').on('click', function(){
+            if($('.size1:checked').length < 1)
+                alert("You haven't selected the size of your pizza");
+            else if($('.sauce1:checked').length < 1)
+                alert("You haven't selected the sauce of your pizza");
+            else if($('.cheese1:checked').length < 1)
+                alert("You haven't selected if you want cheese or not your pizza");
+            else{
+                $('.form-crust').val($('.crust td:nth-child(2)').html());
+                $('.form-sauce').val($('.sauce2 td:nth-child(2)').html());
+                $('.form-cheese').val($('.cheese2 td:nth-child(2)').html());
+                
+                var pizza_toppings = [];
+                $('.topping2>tr').each(function() {
+                    var arrayOfThisRow = [];
+                    var tableData = $(this).find('td.top');
+                    if (tableData.length > 0) {
+                        tableData.each(function() { arrayOfThisRow.push($(this).text()); });
+                        pizza_toppings.push(arrayOfThisRow);
+                    }
+                });
+                $('.form-toppings').val(pizza_toppings);
+
+                var pizza_veggies = [];
+                $('.veggie2>tr').each(function() {
+                    var arrayOfThisRow = [];
+                    var tableData = $(this).find('td.veg');
+                    if (tableData.length > 0) {
+                        tableData.each(function() { arrayOfThisRow.push($(this).text()); });
+                        pizza_veggies.push(arrayOfThisRow);
+                    }
+                });
+                $('.form-veggies').val(pizza_veggies);
+
+
+                //$('.order-form').submit();
+            }
+        });
 
     });
-
-
 
 </script>
 </body>

@@ -101,3 +101,17 @@ div p.no-cheese{
      margin-top: 66px;
  }
 
+.order-total{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.sendData{
+    float: right;
+    margin-top: -160px;
+    margin-right: 45px;
+}
