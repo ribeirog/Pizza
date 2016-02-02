@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Pizza! - Order</title>
+    <title>Pizza! - Payment</title>
 
     <!-- Compressed Foundation CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css">

@@ -155,3 +155,18 @@ div.error{
     margin-top: -16px;
     font-size: 11px;
 }
+
+.admin-login{
+    background-image: url("../img/background-3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+}
+
+.top-bar, .top-bar ul{
+    background-color: #313131;
+}
+
+.menu-text{
+    color: #ffffff;
+}

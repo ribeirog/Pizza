@@ -75,7 +75,7 @@
                     <div class="row">
                         <h3 class="payment-item">Address to carryout: </h3>
                     </div>
-                    <p>612 North Some Strees</p>
+                    <p>612 North Some Street</p>
                     <p>Warrensburg - MO</p>
                     <p>64093</p>
                     <a href="javascript:void(0)" data-open="map" class="hollow button">Get Directions</a>
@@ -265,5 +265,13 @@
     });
 </script>
 
+<?php
+
+$myfile = fopen("temp.txt", "w") or die("Unable to open file!");
+$newLine = "Size: " .$_POST['crust'] . ", Sauce: " . $_POST['sauce'] . ", Toppings: " . $_POST['toppings'] . ", " . $_POST['veggies'];
+fwrite($myfile, $newLine);
+fclose($myfile);
+
+?>
 </body>
 </html>
